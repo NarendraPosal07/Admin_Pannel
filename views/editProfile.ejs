@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <div class="row justify-content-center">
+        <div class="col-xl-9 col-lg-8">
+            <div class="card profile-card card-bx m-b30">
+                <div class="card-header">
+                    <h6 class="title">Account setup</h6>
+                </div>
+                <form enctype="multipart/form-data" action="/editProfile" method="post"
+                    class="profile-form">
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6 m-b30">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" name="name" value="John">
+                            </div>
+                            <div class="col-sm-6 m-b30">
+                                <label class="form-label">Skills</label>
+                                <input type="text" name="skils" class="form-control"
+                                    value="HTML,  JavaScript,  PHP">
+                            </div>
+                            <div class="col-sm-6 m-b30">
+                                <div>
+                                    <label class="form-label">Gender</label>
+                                </div>
+                                <select name="gender" class="selectpicker">
+                                    <option value="-1">Select</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6 m-b30">
+                                <label class="form-label">Birth</label>
+                                <input type="text" name="dob" class="form-control"
+                                    placeholder="dd. mm .yyyy">
+                            </div>
+                            <div class="col-sm-6 m-b30">
+                                <label class="form-label">Phone</label>
+                                <input type="text" name="contact" class="form-control"
+                                    value="+123456789">
+                            </div>
+                            <div class="col-sm-6 m-b30">
+                                <label class="form-label">Email address</label>
+                                <input type="email" name="email" class="form-control"
+                                    value="demo@gmail.com">
+                            </div>
+                            <div class="col-sm-6 m-b30">
+                                <label class="form-label">Country</label>
+                                <select name="country" class="selectpicker">
+                                    <option value="-1">Select</option>
+                                    <option value="russia">India</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="china">America</option>
+                                    <option value="india">United Kingdom</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6 m-b30">
+                                <label class="form-label">City</label>
+                                <select name="city" class="selectpicker">
+                                    <option value="-1">Select</option>
+                                    <option value="rajkot">Ahamdabad</option>
+                                    <option value="surat">Surat</option>
+                                    <option value="bhavanagar">Kachhchha</option>
+                                    <option value="navsari">Vapi</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 m-b30">
+                            <label class="form-label">Bio</label>
+                            <textarea rows="4" type="text" class="w-100 form-control" name="bio"
+                                placeholder="Enter Bio..."></textarea>
+                        </div>
+                    </div>
+                    <div class="col-12" style="padding-left: 30px; padding-bottom: 30px;">
+                        <div class="change-btn d-flex align-items-center flex-wrap">
+                            <input type='file' class="form-control d-none" id="imageUpload"
+                                accept=".png, .jpg, .jpeg" name="profileImg">
+                            <label for="imageUpload" class="btn btn-light ms-0">Select Profile
+                                Image</label>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Edit Profile</button>
+                        <a href="/" class="btn-link">Forgot your password?</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

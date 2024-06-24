@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <!-- bootstrap icon  -->
+    <link rel="stylesheet" href="css/bootstrap-icons.css" />
+
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- fonts  -->
+    <link rel="stylesheet" href="css/fonts.css" />
+
+    <!-- costom css  -->
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .profile-picture {
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        p {
+            text-align: center;
+        }
+
+
+        body {
+            background: #f8f5f0;
+            font-family: "Open sans", sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        .content-profile-page {
+            margin: 1em auto;
+            width: 44.23em;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 0.3rem;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            border: 0.1em solid rgba(0, 0, 0, 0.2);
+            margin-bottom: 1em;
+        }
+
+        .profile-user-page .img-user-profile {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .profile-user-page .img-user-profile .profile-bgHome {
+            border-bottom: 0.2em solid #f5f5f5;
+            width: 44.23em;
+            height: 16em;
+        }
+
+        .profile-user-page .img-user-profile .avatar {
+            margin: 0 auto;
+            background: #fff;
+            width: 7em;
+            height: 7em;
+            padding: 0.25em;
+            border-radius: 0.4em;
+            margin-top: -10em;
+            box-shadow: 0 0 0.1em rgba(0, 0, 0, 0.35);
+        }
+
+        .profile-user-page button {
+            position: absolute;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 7em;
+            background: #3498db;
+            border: 1px solid #2487c9;
+            color: #fff;
+            outline: none;
+            border-radius: 0 0.6em 0.6em 0;
+            padding: 0.8em;
+        }
+
+        .profile-user-page button:hover {
+            background: #51a7e0;
+            transition: background 0.2s ease-in-out;
+            border: 1px solid #2487c9;
+        }
+
+        .profile-user-page .user-profile-data,
+        .profile-user-page .description-profile {
+            text-align: center;
+            padding: 0 1.5em;
+        }
+
+        .profile-user-page .user-profile-data h1 {
+            font-family: "Lato", sans-serif;
+            margin-top: 0.35em;
+            color: #292f33;
+            margin-bottom: 0;
+        }
+
+        .profile-user-page .user-profile-data p {
+            font-family: "Lato", sans-serif;
+            color: #8899a6;
+            font-size: 1.1em;
+            margin-top: 0;
+            margin-bottom: 0.5em;
+        }
+
+        .profile-user-page .description-profile {
+            color: #75787b;
+            font-size: 0.98em;
+        }
+
+        .profile-user-page .data-user {
+            font-family: "Quicksand", sans-serif;
+            margin-bottom: 0;
+            cursor: pointer;
+            padding: 0;
+            list-style: none;
+            display: table;
+            width: 100.15%;
+        }
+
+        .profile-user-page .data-user li {
+            margin: 0;
+            padding: 0;
+            width: 33.33334%;
+            display: table-cell;
+            text-align: center;
+            border-left: 0.1em solid transparent;
+        }
+
+        .profile-user-page .data-user li:first-child {
+            border-left: 0;
+        }
+
+        .profile-user-page .data-user li:first-child a {
+            border-bottom-left-radius: 0.3rem;
+        }
+
+        .profile-user-page .data-user li:last-child a {
+            border-bottom-right-radius: 0.3rem;
+        }
+
+        .profile-user-page .data-user li a,
+        .profile-user-page .data-user li strong {
+            display: block;
+        }
+
+        .profile-user-page .data-user li a {
+            background-color: #f7f7f7;
+            border-top: 1px solid rgba(242, 242, 242, 0.5);
+            border-bottom: 0.2em solid #f7f7f7;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4),
+                0 1px 1px rgba(255, 255, 255, 0.4);
+            padding: 0.93em 0;
+            color: #46494c;
+        }
+
+        .profile-user-page .data-user li a strong,
+        .profile-user-page .data-user li a span {
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .profile-user-page .data-user li a strong {
+            font-size: 2em;
+        }
+
+        .profile-user-page .data-user li a span {
+            color: #717a7e;
+        }
+
+        .profile-user-page .data-user li a:hover {
+            background: rgba(0, 0, 0, 0.05);
+            border-bottom: 0.2em solid #3498db;
+            color: #3498db;
+        }
+
+        .profile-user-page .data-user li a:hover span {
+            color: #3498db;
+        }
+
+        footer h4 {
+            display: block;
+            text-align: center;
+            clear: both;
+            font-family: "Coda", sans-serif;
+            color: #566965;
+            line-height: 6;
+            font-size: 1em;
+        }
+
+        footer h4 a {
+            text-decoration: none;
+            color: #3498db;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-wrapper d-flex">
+
+        <div class="sidebar bg-white p-3 overflow-y-scroll top-0 start-0 vh-100">
+
+            <div class="col-12">
+                <div class="logo">
+                    <img src="images/logo-60c41eaa.svg" alt="" class="img-fluid p-3" />
+                </div>
+                <nav class="mt-3">
+                    <h6 class="ps-2 fs-6">Menu</h6>
+                    <ul class="list-unstyled ps-4">
+                        <li class="nav-item mb-1 mb-2">
+                            <a href="#" class="nav-link d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <i class="bi bi-house pe-3"></i>
+                                    <div class="dropdown">
+                                        <a class="btn dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                                            DashBord
+                                        </a>
+
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="/home">Home</a></li>
+                                            <li><a class="dropdown-item" href="profile">Profile </a></li>
+                                            <li><a class="dropdown-item" href="register">Sign Up </a></li>
+                                            <li><a class="dropdown-item" href="/log_on">Log In </a></li>
+                                            <li><a class="dropdown-item" href="changePass">Change Password </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1 mb-2">
+                            <a href="#" class="nav-link d-flex justify-content-between align-item-center">
+                                <div>
+                                    <i class="bi bi-graph-up-arrow pe-3"></i>
+                                    Changelog
+                                </div>
+                                <button type="button" class="btn">
+                                    <span class="badge text-bg-dark">2.0.1</span>
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h6 class="ps-2 fs-6">Apps</h6>
+                    <ul class="list-unstyled ps-4">
+                        <li class="nav-item mb-1 mb-2">
+                            <a href="#" class="nav-link d-flex justify-content-between">
+                                <div>
+                                    <i class="bi bi-chat-dots pe-3"></i>
+                                    Chat
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1 mb-2">
+                            <a href="#" class="nav-link d-flex justify-content-between">
+                                <div>
+                                    <i class="bi bi-envelope pe-3"></i>
+                                    E-mail
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1 mb-2">
+                            <a href="#" class="nav-link d-flex justify-content-between">
+                                <div>
+                                    <i class="bi bi-kanban pe-3"></i>
+                                    Kanbar
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1 mb-2">
+                            <a href="#" class="nav-link d-flex justify-content-between">
+                                <div>
+                                    <i class="bi bi-calendar-date pe-3"></i>
+                                    Celendar
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1 mb-2">
+                            <a href="#" class="nav-link d-flex justify-content-between">
+                                <div>
+                                    <i class="bi bi-check2-square pe-3"></i>
+                                    Todo
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1 mb-2">
+                            <a href="#" class="nav-link d-flex justify-content-between">
+                                <div>
+                                    <i class="bi bi-file-earmark-check-fill pe-3"></i>
+                                    Projects
+                                </div>
+                                <div class="bg-body-secondary rounded-circle px-1"><i class="bi bi-chevron-right"></i>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h6 class="ps-2 fs-6">Pages</h6>
+                    <ul class="list-unstyled ps-4">
+                        <li class="nav-item mb-1 mb-2">
+                            <a href="blog" class="nav-link d-flex justify-content-between">
+                                <div>
+                                    <i class="bi bi-award-fill pe-2"></i>
+                                    Blogs
+                                </div>
+                                <div class="bg-body-secondary rounded-circle px-1"><i class="bi bi-chevron-right"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1 mb-2">
+                            <a href="#" class="nav-link d-flex justify-content-between">
+                                <div>
+                                    <i class="bi bi-lock-fill pe-2"></i>
+                                    Authentication
+                                </div>
+                                <div class="bg-body-secondary rounded-circle px-1"><i class="bi bi-chevron-right"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1 mb-2">
+                            <a href="#" class="nav-link d-flex justify-content-between">
+                                <div>
+                                    <i class="bi bi-distribute-vertical pe-3"></i>
+                                    Utility
+                                </div>
+                                <div class="bg-body-secondary rounded-circle px-1"><i class="bi bi-chevron-right"></i>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h6 class="ps-2 fs-6">Elements</h6>
+                    <ul class="list-unstyled ps-4 pb-5">
+                        <li class="nav-item mb-1 mb-2">
+                            <a href="#" class="nav-link d-flex justify-content-between">
+                                <div>
+                                    <i class="bi bi-menu-button-wide pe-3"></i>
+                                    Widgets
+                                </div>
+                                <div class="bg-body-secondary rounded-circle px-1"><i class="bi bi-chevron-right"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1 mb-2">
+                            <a href="#" class="nav-link d-flex justify-content-between">
+                                <div>
+                                    <i class="bi bi-pip pe-3"></i>
+                                    Components
+                                </div>
+                                <div class="bg-body-secondary rounded-circle px-1"><i class="bi bi-chevron-right"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1 mb-2">
+                            <a href="#" class="nav-link d-flex justify-content-between">
+                                <div>
+                                    <i class="bi bi-ui-radios pe-3"></i>
+                                    Forms
+                                </div>
+                                <div class="bg-body-secondary rounded-circle px-1"><i class="bi bi-chevron-right"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1 mb-2">
+                            <a href="#" class="nav-link d-flex justify-content-between">
+                                <div>
+                                    <i class="bi bi-file-spreadsheet pe-3"></i>
+                                    Tables
+                                </div>
+                                <div class="bg-body-secondary rounded-circle px-1"><i class="bi bi-chevron-right"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1 mb-2">
+                            <a href="#" class="nav-link d-flex justify-content-between">
+                                <div>
+                                    <i class="bi bi-graph-down pe-3"></i>
+                                    Chart
+                                </div>
+                                <div class="bg-body-secondary rounded-circle px-1"><i class="bi bi-chevron-right"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1 mb-2">
+                            <a href="#" class="nav-link d-flex justify-content-between">
+                                <div>
+                                    <i class="bi bi-map pe-3"></i>
+                                    Map
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1 mb-2">
+                            <a href="#" class="nav-link d-flex justify-content-between">
+                                <div>
+                                    <i class="bi bi-emoji-sunglasses pe-3"></i>
+                                    Icons
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1 mb-2">
+                            <a href="#" class="nav-link d-flex justify-content-between">
+                                <div>
+                                    <i class="bi bi-file-text pe-3"></i>
+                                    Documentation
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="icon rounded-4 bg-black text-white m-4 pt-2">
+                        <div class="upgrad w-100 text-center p-4 position-relative">
+                            <img src="images/rabit-0cfb0342.svg" class="img-fluid position-absolute" alt="">
+                            <h6>Unlimited Access</h6>
+                            <p> Upgrade your system to business plan </p>
+                            <button class="w-100 me-4 rounded">Upgrade</button>
+                        </div>
+                    </div>
+                </nav>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="main-content">
+
+
+        <p>Hellow Welcome</p>
+
+        <% if (user && user.length > 0) { %>
+            <div class="profile-name px-3 pt-2">
+                <h4 class="text-primary mb-0">
+                    <%= user.name %>
+                </h4>
+                <p>
+                    <%= user.specialty %>
+                </p>
+            </div>
+        <% } else { %>
+            <p>No profile information available</p>
+        <% } %>
+        
+
+    </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
