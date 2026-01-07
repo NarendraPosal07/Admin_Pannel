@@ -5,999 +5,544 @@
 
             <%- include('nav') -%>
 
-                <div class="main-content bg-light.bg-gradient">
-                    <header class="col-12 bg-white py-3 px-0 d-flex align-items-center justify-content-center">
-                        <div class="serch col pt-2">
-                            <i class="bi bi-search ps-4 fs-6"></i> search
-                        </div>
-                        <div class="i-list col-6 d-flex align-items-center justify-content-end">
-                            <ul class="d-flex list-unstyled align-items-center justify-content-center m-0">
-                                <li class="d-flex p-2 m-0">
-                                    <div class="rounded-circle contry">
+                <div class="main-content"
+                    style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh;">
+                    <!-- Header -->
+                    <header class="col-12 py-3 px-4"
+                        style="background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="search-box position-relative" style="flex: 1; max-width: 400px;">
+                                <i class="bi bi-search position-absolute"
+                                    style="left: 16px; top: 50%; transform: translateY(-50%); color: #94a3b8;"></i>
+                                <input type="text" class="form-control ps-5" placeholder="Search..."
+                                    style="border-radius: 12px; border: 1px solid #e2e8f0; padding: 10px 16px 10px 45px; background: #f8fafc;">
+                            </div>
+
+                            <div class="header-actions d-flex align-items-center gap-3">
+                                <div class="d-flex align-items-center gap-2 px-3 py-2"
+                                    style="background: #f8fafc; border-radius: 10px;">
+                                    <div class="rounded-circle overflow-hidden" style="width: 24px; height: 24px;">
                                         <img src="images/download.png" class="img-fluid" alt="">
                                     </div>
-                                    <span class="px-2 usa">USA</span>
-                                </li>
-                                <li class="p-2 m-1">
+                                    <span style="font-size: 14px; font-weight: 500; color: #475569;">USA</span>
+                                </div>
+
+                                <button class="btn"
+                                    style="width: 40px; height: 40px; border-radius: 10px; border: none; background: #f8fafc; color: #64748b;">
                                     <i class="bi bi-moon"></i>
-                                </li>
-                                <li class="p-2 m-1">
+                                </button>
+                                <button class="btn"
+                                    style="width: 40px; height: 40px; border-radius: 10px; border: none; background: #f8fafc; color: #64748b;">
                                     <i class="bi bi-palette"></i>
-                                </li>
-                                <li class="p-2 m-1">
+                                </button>
+                                <button class="btn position-relative"
+                                    style="width: 40px; height: 40px; border-radius: 10px; border: none; background: #f8fafc; color: #64748b;">
                                     <i class="bi bi-envelope"></i>
-                                </li>
-                                <li class="p-2 m-1">
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                                        style="background: #ef4444; font-size: 9px;">3</span>
+                                </button>
+                                <button class="btn position-relative"
+                                    style="width: 40px; height: 40px; border-radius: 10px; border: none; background: #f8fafc; color: #64748b;">
                                     <i class="bi bi-bell"></i>
-                                </li>
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                                        style="background: #ef4444; font-size: 9px;">5</span>
+                                </button>
 
-                                <li class="d-flex align-items-center p-2">
-                                    <div class="dropdown">
-                                        <a class="dropdown-toggle d-flex align-items-center p-2" style="color: black; text-decoration: none;" href="#" data-bs-toggle="dropdown">
-                                            <div class="profile rounded-circle">
-                                                <img src="images/download (1).png" alt="">
-                                            </div>
-                                            <div class="name px-2">
-                                                Narendra Posal
-                                            </div>
-                                        </a>
-                                      
-                                        <ul class="dropdown-menu ps-5">
-                                            <li><a href="/profile" style="color: black; text-decoration: none;">Profile</a></li>
-                                            <li><a href="/blog" style="color: black; text-decoration: none;">blog</a></li>
-                                            <li><a href="/logOut" style="color: black; text-decoration: none;">logOut</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-
-                            </ul>
+                                <div class="dropdown">
+                                    <a class="dropdown-toggle d-flex align-items-center gap-2 px-3 py-2 text-decoration-none"
+                                        href="#" data-bs-toggle="dropdown"
+                                        style="background: #f8fafc; border-radius: 10px; color: #1e293b;">
+                                        <div class="rounded-circle overflow-hidden" style="width: 36px; height: 36px;">
+                                            <img src="images/download (1).png" alt=""
+                                                style="width: 100%; height: 100%; object-fit: cover;">
+                                        </div>
+                                        <span style="font-weight: 600; font-size: 14px;">Narendra Posal</span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 mt-2"
+                                        style="border-radius: 12px;">
+                                        <li><a href="/profile" class="dropdown-item py-2"><i
+                                                    class="bi bi-person me-2"></i>Profile</a></li>
+                                        <li><a href="/blog" class="dropdown-item py-2"><i
+                                                    class="bi bi-file-text me-2"></i>Blog</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a href="/logOut" class="dropdown-item py-2 text-danger"><i
+                                                    class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </header>
 
-
-                    <div class="container-fluid p-2">
-
-                        <div class="home col-12 d-flex justify-content-between align-items-center">
-                            <div class="h2 mx-4 m-2 fs-3">
-                                Home
-                            </div>
-                            <input type="date" class="border-0 p-3">
+                    <div class="container-fluid p-4">
+                        <!-- Title -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h2 class="mb-0" style="color: white; font-weight: 700; font-size: 32px;">Dashboard</h2>
+                            <input type="date" class="form-control"
+                                style="max-width: 200px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.9);">
                         </div>
 
-                        <div class="abcd p-2 d-flex mt-3">
-                            <div class="col-3 p-2">
-                                <div class="upgrade p-3 ps-4 rounded d-flex align-items-center justify-content-center">
-                                    <div class="words col-9 me-4">
-                                        <h3 class="fs-5">
-                                            Upgrade Your Dashcode
-                                        </h3>
-                                        <p>Pro plan for better results</p>
-                                    </div>
-                                    <div class="cta col-3">
-                                        <button class="bg-white rounded-circle p-1 border-0 py-2">
-                                            Now
-                                        </button>
+                        <!-- Stats Row -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-lg-3">
+                                <div class="card border-0 shadow-sm h-100"
+                                    style="background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 16px;">
+                                    <div class="card-body p-4 d-flex flex-column justify-content-between">
+                                        <div>
+                                            <h5 class="text-white mb-2" style="font-weight: 700;">Upgrade Your Dashcode
+                                            </h5>
+                                            <p class="text-white mb-4" style="opacity: 0.9; font-size: 14px;">Pro plan
+                                                for better results</p>
+                                        </div>
+                                        <button class="btn btn-light rounded-pill px-4 py-2 align-self-start"
+                                            style="font-weight: 600;">Upgrade Now</button>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-9 d-flex bg-white rounded p-3">
-                                <div class="col-4">
-                                    <div
-                                        class="border p-2 bg-primary-subtle rounded d-flex align-items-center border-4 border-white">
-                                        <div class="chart">
-                                            <svg id="SvgjsSvg1343" width="48" height="48"
-                                                xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                xmlns:svgjs="http://svgjs.dev" class="apexcharts-svg hovering-pan"
-                                                xmlns:data="ApexChartsNS" transform="translate(0, 0)"
-                                                style="background: transparent;">
-                                                <g id="SvgjsG1345" class="apexcharts-inner apexcharts-graphical"
-                                                    transform="translate(0, 0)">
-                                                    <defs id="SvgjsDefs1344">
-                                                        <clipPath id="gridRectMaskk9xketry">
-                                                            <rect id="SvgjsRect1351" width="54" height="50" x="-3"
-                                                                y="-1" rx="0" ry="0" opacity="1" stroke-width="0"
-                                                                stroke="none" stroke-dasharray="0" fill="#fff"></rect>
-                                                        </clipPath>
-                                                        <clipPath id="forecastMaskk9xketry"></clipPath>
-                                                        <clipPath id="nonForecastMaskk9xketry"></clipPath>
-                                                        <clipPath id="gridRectMarkerMaskk9xketry">
-                                                            <rect id="SvgjsRect1352" width="52" height="52" x="-2"
-                                                                y="-2" rx="0" ry="0" opacity="1" stroke-width="0"
-                                                                stroke="none" stroke-dasharray="0" fill="#fff"></rect>
-                                                        </clipPath>
-                                                    </defs>
-                                                    <line id="SvgjsLine1350" x1="26.928571428571427" y1="0"
-                                                        x2="26.928571428571427" y2="48" stroke="#b6b6b6"
-                                                        stroke-dasharray="3" stroke-linecap="butt"
-                                                        class="apexcharts-xcrosshairs" x="26.928571428571427" y="0"
-                                                        width="1" height="48" fill="#b1b9c4" filter="none"
-                                                        fill-opacity="0.9" stroke-width="1"></line>
-                                                    <g id="SvgjsG1359" class="apexcharts-xaxis"
-                                                        transform="translate(0, 0)">
-                                                        <g id="SvgjsG1360" class="apexcharts-xaxis-texts-g"
-                                                            transform="translate(0, 4)"></g>
-                                                    </g>
-                                                    <g id="SvgjsG1370" class="apexcharts-grid">
-                                                        <g id="SvgjsG1371" class="apexcharts-gridlines-horizontal"
-                                                            style="display: none;">
-                                                            <line id="SvgjsLine1373" x1="0" y1="0" x2="48" y2="0"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                            <line id="SvgjsLine1374" x1="0" y1="8" x2="48" y2="8"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                            <line id="SvgjsLine1375" x1="0" y1="16" x2="48" y2="16"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                            <line id="SvgjsLine1376" x1="0" y1="24" x2="48" y2="24"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                            <line id="SvgjsLine1377" x1="0" y1="32" x2="48" y2="32"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                            <line id="SvgjsLine1378" x1="0" y1="40" x2="48" y2="40"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                            <line id="SvgjsLine1379" x1="0" y1="48" x2="48" y2="48"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                        </g>
-                                                        <g id="SvgjsG1372" class="apexcharts-gridlines-vertical"
-                                                            style="display: none;"></g>
-                                                        <line id="SvgjsLine1381" x1="0" y1="48" x2="48" y2="48"
-                                                            stroke="transparent" stroke-dasharray="0"
-                                                            stroke-linecap="butt">
-                                                        </line>
-                                                        <line id="SvgjsLine1380" x1="0" y1="1" x2="0" y2="48"
-                                                            stroke="transparent" stroke-dasharray="0"
-                                                            stroke-linecap="butt">
-                                                        </line>
-                                                    </g>
-                                                    <g id="SvgjsG1353"
-                                                        class="apexcharts-area-series apexcharts-plot-series">
-                                                        <g id="SvgjsG1354" class="apexcharts-series"
-                                                            seriesName="series-1" data:longestSeries="true" rel="1"
-                                                            data:realIndex="0">
-                                                            <path id="SvgjsPath1357"
-                                                                d="M 0 48L 0 24C 2.4 24 4.457142857142857 40 6.857142857142857 40C 9.257142857142856 40 11.314285714285713 8 13.714285714285714 8C 16.114285714285714 8 18.17142857142857 24 20.57142857142857 24C 22.971428571428568 24 25.02857142857143 40 27.428571428571427 40C 29.828571428571426 40 31.885714285714286 8 34.285714285714285 8C 36.68571428571428 8 38.74285714285714 24 41.14285714285714 24C 43.54285714285714 24 45.6 16 48 16C 48 16 48 16 48 48M 48 16z"
-                                                                fill="rgba(0,235,255,0.1)" fill-opacity="1"
-                                                                stroke-opacity="1" stroke-linecap="butt"
-                                                                stroke-width="0" stroke-dasharray="0"
-                                                                class="apexcharts-area" index="0"
-                                                                clip-path="url(#gridRectMaskk9xketry)"
-                                                                pathTo="M 0 48L 0 24C 2.4 24 4.457142857142857 40 6.857142857142857 40C 9.257142857142856 40 11.314285714285713 8 13.714285714285714 8C 16.114285714285714 8 18.17142857142857 24 20.57142857142857 24C 22.971428571428568 24 25.02857142857143 40 27.428571428571427 40C 29.828571428571426 40 31.885714285714286 8 34.285714285714285 8C 36.68571428571428 8 38.74285714285714 24 41.14285714285714 24C 43.54285714285714 24 45.6 16 48 16C 48 16 48 16 48 48M 48 16z"
-                                                                pathFrom="M -1 88L -1 88L 6.857142857142857 88L 13.714285714285714 88L 20.57142857142857 88L 27.428571428571427 88L 34.285714285714285 88L 41.14285714285714 88L 48 88">
-                                                            </path>
-                                                            <path id="SvgjsPath1358"
-                                                                d="M 0 24C 2.4 24 4.457142857142857 40 6.857142857142857 40C 9.257142857142856 40 11.314285714285713 8 13.714285714285714 8C 16.114285714285714 8 18.17142857142857 24 20.57142857142857 24C 22.971428571428568 24 25.02857142857143 40 27.428571428571427 40C 29.828571428571426 40 31.885714285714286 8 34.285714285714285 8C 36.68571428571428 8 38.74285714285714 24 41.14285714285714 24C 43.54285714285714 24 45.6 16 48 16"
-                                                                fill="none" fill-opacity="1" stroke="#00ebff"
-                                                                stroke-opacity="1" stroke-linecap="butt"
-                                                                stroke-width="2" stroke-dasharray="0"
-                                                                class="apexcharts-area" index="0"
-                                                                clip-path="url(#gridRectMaskk9xketry)"
-                                                                pathTo="M 0 24C 2.4 24 4.457142857142857 40 6.857142857142857 40C 9.257142857142856 40 11.314285714285713 8 13.714285714285714 8C 16.114285714285714 8 18.17142857142857 24 20.57142857142857 24C 22.971428571428568 24 25.02857142857143 40 27.428571428571427 40C 29.828571428571426 40 31.885714285714286 8 34.285714285714285 8C 36.68571428571428 8 38.74285714285714 24 41.14285714285714 24C 43.54285714285714 24 45.6 16 48 16"
-                                                                pathFrom="M -1 88L -1 88L 6.857142857142857 88L 13.714285714285714 88L 20.57142857142857 88L 27.428571428571427 88L 34.285714285714285 88L 41.14285714285714 88L 48 88">
-                                                            </path>
-                                                            <g id="SvgjsG1355" class="apexcharts-series-markers-wrap"
-                                                                data:realIndex="0">
-                                                                <g class="apexcharts-series-markers">
-                                                                    <circle id="SvgjsCircle1387" r="0"
-                                                                        cx="27.428571428571427" cy="40"
-                                                                        class="apexcharts-marker w0g2l206 no-pointer-events"
-                                                                        stroke="#ffffff" fill="#00ebff" fill-opacity="1"
-                                                                        stroke-width="2" stroke-opacity="0.9"
-                                                                        default-marker-size="0"></circle>
-                                                                </g>
-                                                            </g>
-                                                        </g>
-                                                        <g id="SvgjsG1356" class="apexcharts-datalabels"
-                                                            data:realIndex="0"></g>
-                                                    </g>
-                                                    <line id="SvgjsLine1382" x1="0" y1="0" x2="48" y2="0"
-                                                        stroke="#b6b6b6" stroke-dasharray="0" stroke-width="1"
-                                                        stroke-linecap="butt" class="apexcharts-ycrosshairs"></line>
-                                                    <line id="SvgjsLine1383" x1="0" y1="0" x2="48" y2="0"
-                                                        stroke-dasharray="0" stroke-width="0" stroke-linecap="butt"
-                                                        class="apexcharts-ycrosshairs-hidden"></line>
-                                                    <g id="SvgjsG1384" class="apexcharts-yaxis-annotations"></g>
-                                                    <g id="SvgjsG1385" class="apexcharts-xaxis-annotations"></g>
-                                                    <g id="SvgjsG1386" class="apexcharts-point-annotations"></g>
-                                                </g>
-                                                <rect id="SvgjsRect1349" width="0" height="0" x="0" y="0" rx="0" ry="0"
-                                                    opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"
-                                                    fill="#fefefe"></rect>
-                                                <g id="SvgjsG1369" class="apexcharts-yaxis" rel="0"
-                                                    transform="translate(-18, 0)"></g>
-                                                <g id="SvgjsG1346" class="apexcharts-annotations"></g>
-                                            </svg>
-                                        </div>
-                                        <div class="groth ps-2">
-                                            <p>Totel revenue</p>
-                                            <span>3,564</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div
-                                        class="border p-2 bg-warning-subtle rounded d-flex align-items-center border-4 border-white">
-                                        <div class="chat">
-                                            <svg id="SvgjsSvg1389" width="48" height="48"
-                                                xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                xmlns:svgjs="http://svgjs.dev" class="apexcharts-svg hovering-pan"
-                                                xmlns:data="ApexChartsNS" transform="translate(0, 0)"
-                                                style="background: transparent;">
-                                                <g id="SvgjsG1391" class="apexcharts-inner apexcharts-graphical"
-                                                    transform="translate(0, 0)">
-                                                    <defs id="SvgjsDefs1390">
-                                                        <clipPath id="gridRectMaskwvx38n1o">
-                                                            <rect id="SvgjsRect1397" width="54" height="50" x="-3"
-                                                                y="-1" rx="0" ry="0" opacity="1" stroke-width="0"
-                                                                stroke="none" stroke-dasharray="0" fill="#fff"></rect>
-                                                        </clipPath>
-                                                        <clipPath id="forecastMaskwvx38n1o"></clipPath>
-                                                        <clipPath id="nonForecastMaskwvx38n1o"></clipPath>
-                                                        <clipPath id="gridRectMarkerMaskwvx38n1o">
-                                                            <rect id="SvgjsRect1398" width="52" height="52" x="-2"
-                                                                y="-2" rx="0" ry="0" opacity="1" stroke-width="0"
-                                                                stroke="none" stroke-dasharray="0" fill="#fff"></rect>
-                                                        </clipPath>
-                                                    </defs>
-                                                    <line id="SvgjsLine1396" x1="13.214285714285714" y1="0"
-                                                        x2="13.214285714285714" y2="48" stroke="#b6b6b6"
-                                                        stroke-dasharray="3" stroke-linecap="butt"
-                                                        class="apexcharts-xcrosshairs" x="13.214285714285714" y="0"
-                                                        width="1" height="48" fill="#b1b9c4" filter="none"
-                                                        fill-opacity="0.9" stroke-width="1"></line>
-                                                    <g id="SvgjsG1405" class="apexcharts-xaxis"
-                                                        transform="translate(0, 0)">
-                                                        <g id="SvgjsG1406" class="apexcharts-xaxis-texts-g"
-                                                            transform="translate(0, 4)"></g>
-                                                    </g>
-                                                    <g id="SvgjsG1416" class="apexcharts-grid">
-                                                        <g id="SvgjsG1417" class="apexcharts-gridlines-horizontal"
-                                                            style="display: none;">
-                                                            <line id="SvgjsLine1419" x1="0" y1="0" x2="48" y2="0"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                            <line id="SvgjsLine1420" x1="0" y1="8" x2="48" y2="8"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                            <line id="SvgjsLine1421" x1="0" y1="16" x2="48" y2="16"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                            <line id="SvgjsLine1422" x1="0" y1="24" x2="48" y2="24"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                            <line id="SvgjsLine1423" x1="0" y1="32" x2="48" y2="32"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                            <line id="SvgjsLine1424" x1="0" y1="40" x2="48" y2="40"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                            <line id="SvgjsLine1425" x1="0" y1="48" x2="48" y2="48"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                        </g>
-                                                        <g id="SvgjsG1418" class="apexcharts-gridlines-vertical"
-                                                            style="display: none;"></g>
-                                                        <line id="SvgjsLine1427" x1="0" y1="48" x2="48" y2="48"
-                                                            stroke="transparent" stroke-dasharray="0"
-                                                            stroke-linecap="butt">
-                                                        </line>
-                                                        <line id="SvgjsLine1426" x1="0" y1="1" x2="0" y2="48"
-                                                            stroke="transparent" stroke-dasharray="0"
-                                                            stroke-linecap="butt">
-                                                        </line>
-                                                    </g>
-                                                    <g id="SvgjsG1399"
-                                                        class="apexcharts-area-series apexcharts-plot-series">
-                                                        <g id="SvgjsG1400" class="apexcharts-series"
-                                                            seriesName="series-1" data:longestSeries="true" rel="1"
-                                                            data:realIndex="0">
-                                                            <path id="SvgjsPath1403"
-                                                                d="M 0 48L 0 24C 2.4 24 4.457142857142857 40 6.857142857142857 40C 9.257142857142856 40 11.314285714285713 8 13.714285714285714 8C 16.114285714285714 8 18.17142857142857 24 20.57142857142857 24C 22.971428571428568 24 25.02857142857143 40 27.428571428571427 40C 29.828571428571426 40 31.885714285714286 8 34.285714285714285 8C 36.68571428571428 8 38.74285714285714 24 41.14285714285714 24C 43.54285714285714 24 45.6 16 48 16C 48 16 48 16 48 48M 48 16z"
-                                                                fill="rgba(251,143,101,0.1)" fill-opacity="1"
-                                                                stroke-opacity="1" stroke-linecap="butt"
-                                                                stroke-width="0" stroke-dasharray="0"
-                                                                class="apexcharts-area" index="0"
-                                                                clip-path="url(#gridRectMaskwvx38n1o)"
-                                                                pathTo="M 0 48L 0 24C 2.4 24 4.457142857142857 40 6.857142857142857 40C 9.257142857142856 40 11.314285714285713 8 13.714285714285714 8C 16.114285714285714 8 18.17142857142857 24 20.57142857142857 24C 22.971428571428568 24 25.02857142857143 40 27.428571428571427 40C 29.828571428571426 40 31.885714285714286 8 34.285714285714285 8C 36.68571428571428 8 38.74285714285714 24 41.14285714285714 24C 43.54285714285714 24 45.6 16 48 16C 48 16 48 16 48 48M 48 16z"
-                                                                pathFrom="M -1 88L -1 88L 6.857142857142857 88L 13.714285714285714 88L 20.57142857142857 88L 27.428571428571427 88L 34.285714285714285 88L 41.14285714285714 88L 48 88">
-                                                            </path>
-                                                            <path id="SvgjsPath1404"
-                                                                d="M 0 24C 2.4 24 4.457142857142857 40 6.857142857142857 40C 9.257142857142856 40 11.314285714285713 8 13.714285714285714 8C 16.114285714285714 8 18.17142857142857 24 20.57142857142857 24C 22.971428571428568 24 25.02857142857143 40 27.428571428571427 40C 29.828571428571426 40 31.885714285714286 8 34.285714285714285 8C 36.68571428571428 8 38.74285714285714 24 41.14285714285714 24C 43.54285714285714 24 45.6 16 48 16"
-                                                                fill="none" fill-opacity="1" stroke="#fb8f65"
-                                                                stroke-opacity="1" stroke-linecap="butt"
-                                                                stroke-width="2" stroke-dasharray="0"
-                                                                class="apexcharts-area" index="0"
-                                                                clip-path="url(#gridRectMaskwvx38n1o)"
-                                                                pathTo="M 0 24C 2.4 24 4.457142857142857 40 6.857142857142857 40C 9.257142857142856 40 11.314285714285713 8 13.714285714285714 8C 16.114285714285714 8 18.17142857142857 24 20.57142857142857 24C 22.971428571428568 24 25.02857142857143 40 27.428571428571427 40C 29.828571428571426 40 31.885714285714286 8 34.285714285714285 8C 36.68571428571428 8 38.74285714285714 24 41.14285714285714 24C 43.54285714285714 24 45.6 16 48 16"
-                                                                pathFrom="M -1 88L -1 88L 6.857142857142857 88L 13.714285714285714 88L 20.57142857142857 88L 27.428571428571427 88L 34.285714285714285 88L 41.14285714285714 88L 48 88">
-                                                            </path>
-                                                            <g id="SvgjsG1401" class="apexcharts-series-markers-wrap"
-                                                                data:realIndex="0">
-                                                                <g class="apexcharts-series-markers">
-                                                                    <circle id="SvgjsCircle1433" r="0"
-                                                                        cx="13.714285714285714" cy="8"
-                                                                        class="apexcharts-marker wl4o6grwnl no-pointer-events"
-                                                                        stroke="#ffffff" fill="#fb8f65" fill-opacity="1"
-                                                                        stroke-width="2" stroke-opacity="0.9"
-                                                                        default-marker-size="0"></circle>
-                                                                </g>
-                                                            </g>
-                                                        </g>
-                                                        <g id="SvgjsG1402" class="apexcharts-datalabels"
-                                                            data:realIndex="0"></g>
-                                                    </g>
-                                                    <line id="SvgjsLine1428" x1="0" y1="0" x2="48" y2="0"
-                                                        stroke="#b6b6b6" stroke-dasharray="0" stroke-width="1"
-                                                        stroke-linecap="butt" class="apexcharts-ycrosshairs"></line>
-                                                    <line id="SvgjsLine1429" x1="0" y1="0" x2="48" y2="0"
-                                                        stroke-dasharray="0" stroke-width="0" stroke-linecap="butt"
-                                                        class="apexcharts-ycrosshairs-hidden"></line>
-                                                    <g id="SvgjsG1430" class="apexcharts-yaxis-annotations"></g>
-                                                    <g id="SvgjsG1431" class="apexcharts-xaxis-annotations"></g>
-                                                    <g id="SvgjsG1432" class="apexcharts-point-annotations"></g>
-                                                </g>
-                                                <rect id="SvgjsRect1395" width="0" height="0" x="0" y="0" rx="0" ry="0"
-                                                    opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"
-                                                    fill="#fefefe"></rect>
-                                                <g id="SvgjsG1415" class="apexcharts-yaxis" rel="0"
-                                                    transform="translate(-18, 0)"></g>
-                                                <g id="SvgjsG1392" class="apexcharts-annotations"></g>
-                                            </svg>
-                                        </div>
-                                        <div class="groth ps-2">
-                                            <p>Totel revenue</p>
-                                            <span>3,564</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div
-                                        class="border p-2 bg-primary-subtle rounded d-flex align-items-center border-4 border-white">
-                                        <div class="chat">
-                                            <svg id="SvgjsSvg1096" width="48" height="48"
-                                                xmlns="http://www.w3.org/2000/svg" version="1.1"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                xmlns:svgjs="http://svgjs.dev" class="apexcharts-svg hovering-pan"
-                                                xmlns:data="ApexChartsNS" transform="translate(0, 0)"
-                                                style="background: transparent;">
-                                                <g id="SvgjsG1098" class="apexcharts-inner apexcharts-graphical"
-                                                    transform="translate(0, 0)">
-                                                    <defs id="SvgjsDefs1097">
-                                                        <clipPath id="gridRectMask7j9mrtf8">
-                                                            <rect id="SvgjsRect1104" width="54" height="50" x="-3"
-                                                                y="-1" rx="0" ry="0" opacity="1" stroke-width="0"
-                                                                stroke="none" stroke-dasharray="0" fill="#fff"></rect>
-                                                        </clipPath>
-                                                        <clipPath id="forecastMask7j9mrtf8"></clipPath>
-                                                        <clipPath id="nonForecastMask7j9mrtf8"></clipPath>
-                                                        <clipPath id="gridRectMarkerMask7j9mrtf8">
-                                                            <rect id="SvgjsRect1105" width="52" height="52" x="-2"
-                                                                y="-2" rx="0" ry="0" opacity="1" stroke-width="0"
-                                                                stroke="none" stroke-dasharray="0" fill="#fff"></rect>
-                                                        </clipPath>
-                                                    </defs>
-                                                    <line id="SvgjsLine1103" x1="13.214285714285714" y1="0"
-                                                        x2="13.214285714285714" y2="48" stroke="#b6b6b6"
-                                                        stroke-dasharray="3" stroke-linecap="butt"
-                                                        class="apexcharts-xcrosshairs" x="13.214285714285714" y="0"
-                                                        width="1" height="48" fill="#b1b9c4" filter="none"
-                                                        fill-opacity="0.9" stroke-width="1"></line>
-                                                    <g id="SvgjsG1112" class="apexcharts-xaxis"
-                                                        transform="translate(0, 0)">
-                                                        <g id="SvgjsG1113" class="apexcharts-xaxis-texts-g"
-                                                            transform="translate(0, 4)"></g>
-                                                    </g>
-                                                    <g id="SvgjsG1123" class="apexcharts-grid">
-                                                        <g id="SvgjsG1124" class="apexcharts-gridlines-horizontal"
-                                                            style="display: none;">
-                                                            <line id="SvgjsLine1126" x1="0" y1="0" x2="48" y2="0"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                            <line id="SvgjsLine1127" x1="0" y1="8" x2="48" y2="8"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                            <line id="SvgjsLine1128" x1="0" y1="16" x2="48" y2="16"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                            <line id="SvgjsLine1129" x1="0" y1="24" x2="48" y2="24"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                            <line id="SvgjsLine1130" x1="0" y1="32" x2="48" y2="32"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                            <line id="SvgjsLine1131" x1="0" y1="40" x2="48" y2="40"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                            <line id="SvgjsLine1132" x1="0" y1="48" x2="48" y2="48"
-                                                                stroke="#e0e0e0" stroke-dasharray="0"
-                                                                stroke-linecap="butt" class="apexcharts-gridline">
-                                                            </line>
-                                                        </g>
-                                                        <g id="SvgjsG1125" class="apexcharts-gridlines-vertical"
-                                                            style="display: none;"></g>
-                                                        <line id="SvgjsLine1134" x1="0" y1="48" x2="48" y2="48"
-                                                            stroke="transparent" stroke-dasharray="0"
-                                                            stroke-linecap="butt">
-                                                        </line>
-                                                        <line id="SvgjsLine1133" x1="0" y1="1" x2="0" y2="48"
-                                                            stroke="transparent" stroke-dasharray="0"
-                                                            stroke-linecap="butt">
-                                                        </line>
-                                                    </g>
-                                                    <g id="SvgjsG1106"
-                                                        class="apexcharts-area-series apexcharts-plot-series">
-                                                        <g id="SvgjsG1107" class="apexcharts-series"
-                                                            seriesName="series-1" data:longestSeries="true" rel="1"
-                                                            data:realIndex="0">
-                                                            <path id="SvgjsPath1110"
-                                                                d="M0 48L0 24C2.4 24 4.457142857142857 40 6.857142857142857 40C9.257142857142856 40 11.314285714285713 8 13.714285714285714 8C16.114285714285714 8 18.17142857142857 24 20.57142857142857 24C22.971428571428568 24 25.02857142857143 40 27.428571428571427 40C29.828571428571426 40 31.885714285714286 8 34.285714285714285 8C36.68571428571428 8 38.74285714285714 24 41.14285714285714 24C43.54285714285714 24 45.6 16 48 16C48 16 48 16 48 48M48 16C48 16 48 16 48 16 "
-                                                                fill="rgba(87,67,190,0.1)" fill-opacity="1"
-                                                                stroke-opacity="1" stroke-linecap="butt"
-                                                                stroke-width="0" stroke-dasharray="0"
-                                                                class="apexcharts-area" index="0"
-                                                                clip-path="url(#gridRectMask7j9mrtf8)"
-                                                                pathTo="M 0 48L 0 24C 2.4 24 4.457142857142857 40 6.857142857142857 40C 9.257142857142856 40 11.314285714285713 8 13.714285714285714 8C 16.114285714285714 8 18.17142857142857 24 20.57142857142857 24C 22.971428571428568 24 25.02857142857143 40 27.428571428571427 40C 29.828571428571426 40 31.885714285714286 8 34.285714285714285 8C 36.68571428571428 8 38.74285714285714 24 41.14285714285714 24C 43.54285714285714 24 45.6 16 48 16C 48 16 48 16 48 48M 48 16z"
-                                                                pathFrom="M -1 88L -1 88L 6.857142857142857 88L 13.714285714285714 88L 20.57142857142857 88L 27.428571428571427 88L 34.285714285714285 88L 41.14285714285714 88L 48 88">
-                                                            </path>
-                                                            <path id="SvgjsPath1111"
-                                                                d="M0 24C2.4 24 4.457142857142857 40 6.857142857142857 40C9.257142857142856 40 11.314285714285713 8 13.714285714285714 8C16.114285714285714 8 18.17142857142857 24 20.57142857142857 24C22.971428571428568 24 25.02857142857143 40 27.428571428571427 40C29.828571428571426 40 31.885714285714286 8 34.285714285714285 8C36.68571428571428 8 38.74285714285714 24 41.14285714285714 24C43.54285714285714 24 45.6 16 48 16C48 16 48 16 48 16 "
-                                                                fill="none" fill-opacity="1" stroke="#5743be"
-                                                                stroke-opacity="1" stroke-linecap="butt"
-                                                                stroke-width="2" stroke-dasharray="0"
-                                                                class="apexcharts-area" index="0"
-                                                                clip-path="url(#gridRectMask7j9mrtf8)"
-                                                                pathTo="M 0 24C 2.4 24 4.457142857142857 40 6.857142857142857 40C 9.257142857142856 40 11.314285714285713 8 13.714285714285714 8C 16.114285714285714 8 18.17142857142857 24 20.57142857142857 24C 22.971428571428568 24 25.02857142857143 40 27.428571428571427 40C 29.828571428571426 40 31.885714285714286 8 34.285714285714285 8C 36.68571428571428 8 38.74285714285714 24 41.14285714285714 24C 43.54285714285714 24 45.6 16 48 16"
-                                                                pathFrom="M -1 88L -1 88L 6.857142857142857 88L 13.714285714285714 88L 20.57142857142857 88L 27.428571428571427 88L 34.285714285714285 88L 41.14285714285714 88L 48 88">
-                                                            </path>
-                                                            <g id="SvgjsG1108" class="apexcharts-series-markers-wrap"
-                                                                data:realIndex="0">
-                                                                <g class="apexcharts-series-markers">
-                                                                    <circle id="SvgjsCircle1140" r="0"
-                                                                        cx="13.714285714285714" cy="8"
-                                                                        class="apexcharts-marker wu1t7womm no-pointer-events"
-                                                                        stroke="#ffffff" fill="#5743be" fill-opacity="1"
-                                                                        stroke-width="2" stroke-opacity="0.9"
-                                                                        default-marker-size="0"></circle>
-                                                                </g>
-                                                            </g>
-                                                        </g>
-                                                        <g id="SvgjsG1109" class="apexcharts-datalabels"
-                                                            data:realIndex="0"></g>
-                                                    </g>
-                                                    <line id="SvgjsLine1135" x1="0" y1="0" x2="48" y2="0"
-                                                        stroke="#b6b6b6" stroke-dasharray="0" stroke-width="1"
-                                                        stroke-linecap="butt" class="apexcharts-ycrosshairs"></line>
-                                                    <line id="SvgjsLine1136" x1="0" y1="0" x2="48" y2="0"
-                                                        stroke-dasharray="0" stroke-width="0" stroke-linecap="butt"
-                                                        class="apexcharts-ycrosshairs-hidden"></line>
-                                                    <g id="SvgjsG1137" class="apexcharts-yaxis-annotations"></g>
-                                                    <g id="SvgjsG1138" class="apexcharts-xaxis-annotations"></g>
-                                                    <g id="SvgjsG1139" class="apexcharts-point-annotations"></g>
-                                                </g>
-                                                <rect id="SvgjsRect1102" width="0" height="0" x="0" y="0" rx="0" ry="0"
-                                                    opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0"
-                                                    fill="#fefefe"></rect>
-                                                <g id="SvgjsG1122" class="apexcharts-yaxis" rel="0"
-                                                    transform="translate(-18, 0)"></g>
-                                                <g id="SvgjsG1099" class="apexcharts-annotations"></g>
-                                            </svg>
-                                        </div>
-                                        <div class="groth ps-2">
-                                            <p>Totel revenue</p>
-                                            <span>3,564</span>
+                            <div class="col-lg-9">
+                                <div class="card border-0 shadow-sm" style="border-radius: 16px;">
+                                    <div class="card-body p-4">
+                                        <div class="row g-3">
+                                            <div class="col-md-4">
+                                                <div class="p-3 rounded-3 d-flex align-items-center gap-3"
+                                                    style="background: #667eea15; border-left: 4px solid #667eea;">
+                                                    <div id="chart-mini-1" style="width: 48px; height: 48px;"></div>
+                                                    <div>
+                                                        <p class="mb-1 text-muted" style="font-size: 13px;">Total
+                                                            Revenue</p>
+                                                        <h5 class="mb-0" style="font-weight: 700;">$3,564</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="p-3 rounded-3 d-flex align-items-center gap-3"
+                                                    style="background: #f59e0b15; border-left: 4px solid #f59e0b;">
+                                                    <div id="chart-mini-2" style="width: 48px; height: 48px;"></div>
+                                                    <div>
+                                                        <p class="mb-1 text-muted" style="font-size: 13px;">Total
+                                                            Revenue</p>
+                                                        <h5 class="mb-0" style="font-weight: 700;">$3,564</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="p-3 rounded-3 d-flex align-items-center gap-3"
+                                                    style="background: #8b5cf615; border-left: 4px solid #8b5cf6;">
+                                                    <div id="chart-mini-3" style="width: 48px; height: 48px;"></div>
+                                                    <div>
+                                                        <p class="mb-1 text-muted" style="font-size: 13px;">Total
+                                                            Revenue</p>
+                                                        <h5 class="mb-0" style="font-weight: 700;">$3,564</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="container-fluid mt-3 d-flex p-1 justify-content-between">
-                            <div class="col-8 p-2">
-                                <div class="p-2 bg-white rounded">
-                                    <div
-                                        class="detail p-2 border-bottom d-flex justify-content-between align-items-center">
-                                        <h3>revenue report</h3>
-                                        <ul class="d-flex fs-6">
-                                            <li class="pe-4">Net Profit</li>
-                                            <li class="pe-4">Revenue</li>
-                                            <li class="pe-4">Free Cash Flow</li>
-                                        </ul>
+                        <!-- Charts Row -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-lg-8">
+                                <div class="card border-0 shadow-sm" style="border-radius: 16px;">
+                                    <div class="card-body p-4">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom">
+                                            <h5 class="mb-0" style="font-weight: 700;">Revenue Report</h5>
+                                            <div class="d-flex gap-3" style="font-size: 13px;">
+                                                <span class="text-muted">Net Profit</span>
+                                                <span class="text-muted">Revenue</span>
+                                                <span class="text-muted">Free Cash Flow</span>
+                                            </div>
+                                        </div>
+                                        <div id="chart1"></div>
                                     </div>
-                                    <div id="chart1"></div>
                                 </div>
-
                             </div>
-                            <div class="col-4 p-2">
-                                <div class="p-2 bg-white rounded">
-                                    <div class="detail p-4 border-bottom">
-                                        <h3>Overview</h3>
+                            <div class="col-lg-4">
+                                <div class="card border-0 shadow-sm" style="border-radius: 16px;">
+                                    <div class="card-body p-4">
+                                        <h5 class="mb-3 pb-3 border-bottom" style="font-weight: 700;">Overview</h5>
+                                        <div id="chart2"></div>
                                     </div>
-                                    <div id="chart2"></div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-12 d-flex">
-                            <div class="col-8 p-3">
-                                <table class="table bg-white rounded">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">
-                                                <h2>All Company</h2>
-                                            </th>
-                                            <th></th>
-                                            <th></th>
-                                            <th></th>
-                                            <th scope="col"><button class="border-1 rounded">
-                                                    <i class="bi bi-three-dots"></i></button>
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="bg-secondary-subtle">
-                                            <th scope="row">Company</th>
-                                            <td>Catagory</td>
-                                            <td>views</td>
-                                            <td>Revenue</td>
-                                            <td>Sales</td>
-                                        </tr>
-
-
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="frame d-flex align-items-center">
-                                                    <div class="profile rounded-circle">
-                                                        <img src="images/download (1).png" alt="">
-                                                    </div>
-                                                    <div class="name ps-3">
-                                                        Narendra Posal
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <td>Technology</td>
-                                            <td>345</td>
-                                            <td>$432.14</td>
-                                            <td>
-                                                <span class="pe-3">95%</span>
-                                                <i class="bi bi-graph-down-arrow text-danger"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="frame d-flex align-items-center">
-                                                    <div class="profile rounded-circle">
-                                                        <img src="images/download (1).png" alt="">
-                                                    </div>
-                                                    <div class="name ps-3">
-                                                        Narendra Posal
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <td>Technology</td>
-                                            <td>321</td>
-                                            <td>$432.14</td>
-                                            <td>
-                                                <span class="pe-2">123%</span>
-                                                <i class="bi bi-graph-up-arrow text-success"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="frame d-flex align-items-center">
-                                                    <div class="profile rounded-circle">
-                                                        <img src="images/download (1).png" alt="">
-                                                    </div>
-                                                    <div class="name ps-3">
-                                                        Narendra Posal
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <td>Technology</td>
-                                            <td>356</td>
-                                            <td>$432.14</td>
-                                            <td>
-                                                <span class="pe-2">122%</span>
-                                                <i class="bi bi-graph-up-arrow text-success"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="frame d-flex align-items-center">
-                                                    <div class="profile rounded-circle">
-                                                        <img src="images/download (1).png" alt="">
-                                                    </div>
-                                                    <div class="name ps-3">
-                                                        Narendra Posal
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <td>Technology</td>
-                                            <td>456</td>
-                                            <td>$432.14</td>
-                                            <td>
-                                                <span class="pe-2">134%</span>
-                                                <i class="bi bi-graph-up-arrow text-success"></i>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="frame d-flex align-items-center">
-                                                    <div class="profile rounded-circle">
-                                                        <img src="images/download (1).png" alt="">
-                                                    </div>
-                                                    <div class="name ps-3">
-                                                        Narendra Posal
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <td>Technology</td>
-                                            <td>234</td>
-                                            <td>$432.14</td>
-                                            <td>
-                                                <span class="pe-3">98%</span>
-                                                <i class="bi bi-graph-down-arrow text-danger"></i>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <!-- Tables Row -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-lg-8">
+                                <div class="card border-0 shadow-sm" style="border-radius: 16px;">
+                                    <div class="card-body p-0">
+                                        <table class="table mb-0">
+                                            <thead style="background: #f8fafc;">
+                                                <tr>
+                                                    <th class="p-4" style="border: none;">
+                                                        <h5 class="mb-0" style="font-weight: 700;">All Company</h5>
+                                                    </th>
+                                                    <th style="border: none;"></th>
+                                                    <th style="border: none;"></th>
+                                                    <th style="border: none;"></th>
+                                                    <th class="text-end" style="border: none;">
+                                                        <button class="btn"
+                                                            style="width: 36px; height: 36px; border-radius: 8px; background: white;">
+                                                            <i class="bi bi-three-dots"></i>
+                                                        </button>
+                                                    </th>
+                                                </tr>
+                                                <tr style="background: #f1f5f9;">
+                                                    <th class="p-3"
+                                                        style="font-size: 13px; color: #64748b; font-weight: 600;">
+                                                        Company</th>
+                                                    <td style="font-size: 13px; color: #64748b; font-weight: 600;">
+                                                        Category</td>
+                                                    <td style="font-size: 13px; color: #64748b; font-weight: 600;">Views
+                                                    </td>
+                                                    <td style="font-size: 13px; color: #64748b; font-weight: 600;">
+                                                        Revenue</td>
+                                                    <td style="font-size: 13px; color: #64748b; font-weight: 600;">Sales
+                                                    </td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="p-3">
+                                                        <div class="d-flex align-items-center gap-3">
+                                                            <div class="rounded-circle overflow-hidden"
+                                                                style="width: 40px; height: 40px;">
+                                                                <img src="images/download (1).png" alt=""
+                                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                            </div>
+                                                            <span style="font-weight: 500;">Narendra Posal</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="align-middle">Technology</td>
+                                                    <td class="align-middle">345</td>
+                                                    <td class="align-middle" style="font-weight: 600;">$432.14</td>
+                                                    <td class="align-middle">
+                                                        <span class="me-2">95%</span>
+                                                        <i class="bi bi-graph-down-arrow text-danger"></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p-3">
+                                                        <div class="d-flex align-items-center gap-3">
+                                                            <div class="rounded-circle overflow-hidden"
+                                                                style="width: 40px; height: 40px;">
+                                                                <img src="images/download (1).png" alt=""
+                                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                            </div>
+                                                            <span style="font-weight: 500;">Narendra Posal</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="align-middle">Technology</td>
+                                                    <td class="align-middle">321</td>
+                                                    <td class="align-middle" style="font-weight: 600;">$432.14</td>
+                                                    <td class="align-middle">
+                                                        <span class="me-2">123%</span>
+                                                        <i class="bi bi-graph-up-arrow text-success"></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p-3">
+                                                        <div class="d-flex align-items-center gap-3">
+                                                            <div class="rounded-circle overflow-hidden"
+                                                                style="width: 40px; height: 40px;">
+                                                                <img src="images/download (1).png" alt=""
+                                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                            </div>
+                                                            <span style="font-weight: 500;">Narendra Posal</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="align-middle">Technology</td>
+                                                    <td class="align-middle">356</td>
+                                                    <td class="align-middle" style="font-weight: 600;">$432.14</td>
+                                                    <td class="align-middle">
+                                                        <span class="me-2">122%</span>
+                                                        <i class="bi bi-graph-up-arrow text-success"></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p-3">
+                                                        <div class="d-flex align-items-center gap-3">
+                                                            <div class="rounded-circle overflow-hidden"
+                                                                style="width: 40px; height: 40px;">
+                                                                <img src="images/download (1).png" alt=""
+                                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                            </div>
+                                                            <span style="font-weight: 500;">Narendra Posal</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="align-middle">Technology</td>
+                                                    <td class="align-middle">456</td>
+                                                    <td class="align-middle" style="font-weight: 600;">$432.14</td>
+                                                    <td class="align-middle">
+                                                        <span class="me-2">134%</span>
+                                                        <i class="bi bi-graph-up-arrow text-success"></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p-3">
+                                                        <div class="d-flex align-items-center gap-3">
+                                                            <div class="rounded-circle overflow-hidden"
+                                                                style="width: 40px; height: 40px;">
+                                                                <img src="images/download (1).png" alt=""
+                                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                            </div>
+                                                            <span style="font-weight: 500;">Narendra Posal</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="align-middle">Technology</td>
+                                                    <td class="align-middle">234</td>
+                                                    <td class="align-middle" style="font-weight: 600;">$432.14</td>
+                                                    <td class="align-middle">
+                                                        <span class="me-2">98%</span>
+                                                        <i class="bi bi-graph-down-arrow text-danger"></i>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-4 p-3">
-                                <table class="table bg-white rounded">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">
-                                                <h2>All Company</h2>
-                                            </th>
-                                            <th scope="col">
-                                                <button class="border-1 rounded">
-                                                    <i class="bi bi-three-dots"></i></button>
-                                            </th>
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="frame d-flex align-items-center">
-                                                    <div class="profile rounded-circle">
-                                                        <img src="images/download (1).png" alt="">
-                                                    </div>
-                                                    <div class="name ps-3">
-                                                        Web Back-End Devloper...
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <td>1 hour</td>
-
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="frame d-flex align-items-center">
-                                                    <div class="profile rounded-circle">
-                                                        <img src="images/download (1).png" alt="">
-                                                    </div>
-                                                    <div class="name ps-3">
-                                                        Web Back-End Devloper...
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <td>1 hour</td>
-
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="frame d-flex align-items-center">
-                                                    <div class="profile rounded-circle">
-                                                        <img src="images/download (1).png" alt="">
-                                                    </div>
-                                                    <div class="name ps-3">
-                                                        Web Back-End Devloper...
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <td colspan="2">1 hour</td>
-
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="frame d-flex align-items-center">
-                                                    <div class="profile rounded-circle">
-                                                        <img src="images/download (1).png" alt="">
-                                                    </div>
-                                                    <div class="name ps-3">
-                                                        Web Back-End Devloper...
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <td colspan="2">1 hour</td>
-
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="frame d-flex align-items-center">
-                                                    <div class="profile rounded-circle">
-                                                        <img src="images/download (1).png" alt="">
-                                                    </div>
-                                                    <div class="name ps-3">
-                                                        Web Back-End Devloper...
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <td colspan="2">1 hour</td>
-
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">
-                                                <div class="frame d-flex align-items-center">
-                                                    <div class="profile rounded-circle">
-                                                        <img src="images/download (1).png" alt="">
-                                                    </div>
-                                                    <div class="name ps-3">
-                                                        Web Back-End Devloper...
-                                                    </div>
-                                                </div>
-                                            </th>
-                                            <td colspan="2">1 hour</td>
-
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="col-lg-4">
+                                <div class="card border-0 shadow-sm" style="border-radius: 16px;">
+                                    <div class="card-body p-0">
+                                        <table class="table mb-0">
+                                            <thead style="background: #f8fafc;">
+                                                <tr>
+                                                    <th class="p-4" style="border: none;">
+                                                        <h5 class="mb-0" style="font-weight: 700;">Recent Activity</h5>
+                                                    </th>
+                                                    <th class="text-end" style="border: none;">
+                                                        <button class="btn"
+                                                            style="width: 36px; height: 36px; border-radius: 8px; background: white;">
+                                                            <i class="bi bi-three-dots"></i>
+                                                        </button>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="p-3">
+                                                        <div class="d-flex align-items-center gap-3">
+                                                            <div class="rounded-circle overflow-hidden flex-shrink-0"
+                                                                style="width: 40px; height: 40px;">
+                                                                <img src="images/download (1).png" alt=""
+                                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                            </div>
+                                                            <span style="font-size: 14px;">Web Back-End
+                                                                Devloper...</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="align-middle text-muted" style="font-size: 13px;">1 hour
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p-3">
+                                                        <div class="d-flex align-items-center gap-3">
+                                                            <div class="rounded-circle overflow-hidden flex-shrink-0"
+                                                                style="width: 40px; height: 40px;">
+                                                                <img src="images/download (1).png" alt=""
+                                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                            </div>
+                                                            <span style="font-size: 14px;">Web Back-End
+                                                                Devloper...</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="align-middle text-muted" style="font-size: 13px;">1 hour
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p-3">
+                                                        <div class="d-flex align-items-center gap-3">
+                                                            <div class="rounded-circle overflow-hidden flex-shrink-0"
+                                                                style="width: 40px; height: 40px;">
+                                                                <img src="images/download (1).png" alt=""
+                                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                            </div>
+                                                            <span style="font-size: 14px;">Web Back-End
+                                                                Devloper...</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="align-middle text-muted" style="font-size: 13px;">1 hour
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p-3">
+                                                        <div class="d-flex align-items-center gap-3">
+                                                            <div class="rounded-circle overflow-hidden flex-shrink-0"
+                                                                style="width: 40px; height: 40px;">
+                                                                <img src="images/download (1).png" alt=""
+                                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                            </div>
+                                                            <span style="font-size: 14px;">Web Back-End
+                                                                Devloper...</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="align-middle text-muted" style="font-size: 13px;">1 hour
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p-3">
+                                                        <div class="d-flex align-items-center gap-3">
+                                                            <div class="rounded-circle overflow-hidden flex-shrink-0"
+                                                                style="width: 40px; height: 40px;">
+                                                                <img src="images/download (1).png" alt=""
+                                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                            </div>
+                                                            <span style="font-size: 14px;">Web Back-End
+                                                                Devloper...</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="align-middle text-muted" style="font-size: 13px;">1 hour
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="p-3">
+                                                        <div class="d-flex align-items-center gap-3">
+                                                            <div class="rounded-circle overflow-hidden flex-shrink-0"
+                                                                style="width: 40px; height: 40px;">
+                                                                <img src="images/download (1).png" alt=""
+                                                                    style="width: 100%; height: 100%; object-fit: cover;">
+                                                            </div>
+                                                            <span style="font-size: 14px;">Web Back-End
+                                                                Devloper...</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="align-middle text-muted" style="font-size: 13px;">1 hour
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="col-12 d-flex p-3">
-                            <div class="col-8 bg-white rounded p-3">
-                                <div class="sales col-12 d-flex border-bottom p-3">
-                                    <h2 class="col-9">Most Sales</h2>
-                                    <div
-                                        class="d-flex col-3 p-2 border border-dark-subtle rounded justify-content-evenly">
-                                        <button class="rounded py-1 border-0  px-3 bg-white">Global</button>
-                                        <button class="rounded py-1 border-0  px-3 bg-black text-white">USA</button>
-                                    </div>
-                                </div>
-                                <div class="map d-flex">
-                                    <div class="earning col-4 pt-3">
-                                        <div class="total-earning">
-                                            <p class="mb-2" style="font-size: 14px;"> Total earnings </p>
-                                            <h6 class="mb-2" style="font-size: 16px;"> $12,65,64787.00 </h6>
-                                            <p class="mb-2" style="font-size: 12px;"><span
-                                                    class="text-info">+0.8%</span> From
-                                                last month </p>
+                        <!-- Map & Overview Row -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-lg-8">
+                                <div class="card border-0 shadow-sm" style="border-radius: 16px;">
+                                    <div class="card-body p-4">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom">
+                                            <h5 class="mb-0" style="font-weight: 700;">Most Sales</h5>
+                                            <div class="btn-group" role="group"
+                                                style="border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden;">
+                                                <button type="button" class="btn btn-sm"
+                                                    style="background: white; border: none; padding: 8px 20px;">Global</button>
+                                                <button type="button" class="btn btn-sm"
+                                                    style="background: #1e293b; color: white; border: none; padding: 8px 20px;">USA</button>
+                                            </div>
                                         </div>
-                                        <div class="list">
-                                            <ul class="list-unstyled">
-                                                <li>
-                                                    <div
-                                                        class="des d-flex justify-content-evenly align-items-center py-1">
-                                                        <div class="dot-1"></div>
-                                                        <p>Nevada</p>
-                                                        <p>$124k</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div
-                                                        class="des d-flex justify-content-evenly align-items-center py-1">
-                                                        <div class="dot-2"></div>
-                                                        <p>Nevada</p>
-                                                        <p>$124k</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div
-                                                        class="des d-flex justify-content-evenly align-items-center py-1">
-                                                        <div class="dot-3"></div>
-                                                        <p>Nevada</p>
-                                                        <p>$124k</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div
-                                                        class="des d-flex justify-content-evenly align-items-center py-1">
-                                                        <div class="dot-4"></div>
-                                                        <p>Nevada</p>
-                                                        <p>$124k</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div
-                                                        class="des d-flex justify-content-evenly align-items-center py-1">
-                                                        <div class="dot-5"></div>
-                                                        <p>Nevada</p>
-                                                        <p>$124k</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <div class="mb-3">
+                                                    <p class="text-muted mb-1" style="font-size: 13px;">Total earnings
+                                                    </p>
+                                                    <h5 style="font-weight: 700;">$12,65,64787.00</h5>
+                                                    <p class="mb-0" style="font-size: 12px;"><span
+                                                            class="text-info">+0.8%</span> From last month</p>
+                                                </div>
+                                                <ul class="list-unstyled">
+                                                    <li class="d-flex justify-content-between align-items-center py-2">
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <div
+                                                                style="width: 12px; height: 12px; background: #667eea; border-radius: 50%;">
+                                                            </div>
+                                                            <span style="font-size: 14px;">Nevada</span>
+                                                        </div>
+                                                        <span style="font-weight: 600; font-size: 14px;">$124k</span>
+                                                    </li>
+                                                    <li class="d-flex justify-content-between align-items-center py-2">
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <div
+                                                                style="width: 12px; height: 12px; background: #f59e0b; border-radius: 50%;">
+                                                            </div>
+                                                            <span style="font-size: 14px;">Nevada</span>
+                                                        </div>
+                                                        <span style="font-weight: 600; font-size: 14px;">$124k</span>
+                                                    </li>
+                                                    <li class="d-flex justify-content-between align-items-center py-2">
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <div
+                                                                style="width: 12px; height: 12px; background: #8b5cf6; border-radius: 50%;">
+                                                            </div>
+                                                            <span style="font-size: 14px;">Nevada</span>
+                                                        </div>
+                                                        <span style="font-weight: 600; font-size: 14px;">$124k</span>
+                                                    </li>
+                                                    <li class="d-flex justify-content-between align-items-center py-2">
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <div
+                                                                style="width: 12px; height: 12px; background: #10b981; border-radius: 50%;">
+                                                            </div>
+                                                            <span style="font-size: 14px;">Nevada</span>
+                                                        </div>
+                                                        <span style="font-weight: 600; font-size: 14px;">$124k</span>
+                                                    </li>
+                                                    <li class="d-flex justify-content-between align-items-center py-2">
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <div
+                                                                style="width: 12px; height: 12px; background: #ef4444; border-radius: 50%;">
+                                                            </div>
+                                                            <span style="font-size: 14px;">Nevada</span>
+                                                        </div>
+                                                        <span style="font-weight: 600; font-size: 14px;">$124k</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-8">
+                                                <div id="chartdiv" style="width: 100%; height: 300px;"></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="map-c col-8 py-3">
-                                        <div id="chartdiv"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4 p-2 rounded">
-                                <div class="over d-flex justify-content-between p-4 bg-white border-bottom">
-                                    <h2>Overview</h2>
-                                    <div class="dropdown">
-                                        <button class="btn bg-white dropdown-toggle" type="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            january
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">January</a></li>
-                                            <li><a class="dropdown-item" href="#">February</a></li>
-                                            <li><a class="dropdown-item" href="#">March</a></li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                                <div class="cir bg-white p-2">
-                                    <div class="vue-apexcharts" style="min-height: 220.975px;">
-                                        <div id="apexcharts4p9n4fkx"
-                                            class="apexcharts-canvas apexcharts4p9n4fkx apexcharts-theme-light"
-                                            style="width: 346px; height: 220.975px;"><svg id="SvgjsSvg1825" width="346"
-                                                height="220.97500000000002" xmlns="http://www.w3.org/2000/svg"
-                                                version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                xmlns:svgjs="http://svgjs.dev" class="apexcharts-svg"
-                                                xmlns:data="ApexChartsNS" transform="translate(0, 0)"
-                                                style="background: transparent;">
-                                                <g id="SvgjsG1827" class="apexcharts-inner apexcharts-graphical"
-                                                    transform="translate(36, 0)">
-                                                    <defs id="SvgjsDefs1826">
-                                                        <clipPath id="gridRectMask4p9n4fkx">
-                                                            <rect id="SvgjsRect1829" width="282" height="300" x="-3"
-                                                                y="-1" rx="0" ry="0" opacity="1" stroke-width="0"
-                                                                stroke="none" stroke-dasharray="0" fill="#fff"></rect>
-                                                        </clipPath>
-                                                        <clipPath id="forecastMask4p9n4fkx"></clipPath>
-                                                        <clipPath id="nonForecastMask4p9n4fkx"></clipPath>
-                                                        <clipPath id="gridRectMarkerMask4p9n4fkx">
-                                                            <rect id="SvgjsRect1830" width="280" height="302" x="-2"
-                                                                y="-2" rx="0" ry="0" opacity="1" stroke-width="0"
-                                                                stroke="none" stroke-dasharray="0" fill="#fff"></rect>
-                                                        </clipPath>
-                                                        <linearGradient id="SvgjsLinearGradient1835" x1="1" y1="0"
-                                                            x2="0" y2="1">
-                                                            <stop id="SvgjsStop1836" stop-opacity="1"
-                                                                stop-color="rgba(242,242,242,1)" offset="0"></stop>
-                                                            <stop id="SvgjsStop1837" stop-opacity="1"
-                                                                stop-color="rgba(206,206,206,1)" offset="0.5"></stop>
-                                                            <stop id="SvgjsStop1838" stop-opacity="1"
-                                                                stop-color="rgba(206,206,206,1)" offset="0.65"></stop>
-                                                            <stop id="SvgjsStop1839" stop-opacity="1"
-                                                                stop-color="rgba(242,242,242,1)" offset="0.91"></stop>
-                                                        </linearGradient>
-                                                        <linearGradient id="SvgjsLinearGradient1847" x1="1" y1="0"
-                                                            x2="0" y2="1">
-                                                            <stop id="SvgjsStop1848" stop-opacity="1"
-                                                                stop-color="rgba(70,105,250,1)" offset="0"></stop>
-                                                            <stop id="SvgjsStop1849" stop-opacity="1"
-                                                                stop-color="rgba(60,89,213,1)" offset="0.5"></stop>
-                                                            <stop id="SvgjsStop1850" stop-opacity="1"
-                                                                stop-color="rgba(60,89,213,1)" offset="0.65"></stop>
-                                                            <stop id="SvgjsStop1851" stop-opacity="1"
-                                                                stop-color="rgba(70,105,250,1)" offset="0.91"></stop>
-                                                        </linearGradient>
-                                                    </defs>
-                                                    <g id="SvgjsG1831" class="apexcharts-radialbar">
-                                                        <g id="SvgjsG1832">
-                                                            <g id="SvgjsG1833" class="apexcharts-tracks">
-                                                                <g id="SvgjsG1834"
-                                                                    class="apexcharts-radialbar-track apexcharts-track"
-                                                                    rel="1">
-                                                                    <path id="apexcharts-radialbarTrack-0"
-                                                                        d="M 79.38343481566392 196.61656518433605 A 82.89634146341464 82.89634146341464 0 1 1 196.61656518433608 196.61656518433605"
-                                                                        fill="none" fill-opacity="1"
-                                                                        stroke="rgba(242,242,242,0.85)"
-                                                                        stroke-opacity="1" stroke-linecap="butt"
-                                                                        stroke-width="26.343780487804885"
-                                                                        stroke-dasharray="0"
-                                                                        class="apexcharts-radialbar-area"
-                                                                        data:pathOrig="M 79.38343481566392 196.61656518433605 A 82.89634146341464 82.89634146341464 0 1 1 196.61656518433608 196.61656518433605">
-                                                                    </path>
-                                                                </g>
-                                                            </g>
-                                                            <g id="SvgjsG1841">
-                                                                <g id="SvgjsG1846"
-                                                                    class="apexcharts-series apexcharts-radial-series"
-                                                                    seriesName="series-1" rel="1" data:realIndex="0">
-                                                                    <path id="SvgjsPath1852"
-                                                                        d="M 79.38343481566392 196.61656518433605 A 82.89634146341464 82.89634146341464 0 1 1 197.63063771709733 80.41536252201178"
-                                                                        fill="none" fill-opacity="0.85"
-                                                                        stroke="url(#SvgjsLinearGradient1847)"
-                                                                        stroke-opacity="1" stroke-linecap="butt"
-                                                                        stroke-width="27.15853658536586"
-                                                                        stroke-dasharray="4"
-                                                                        class="apexcharts-radialbar-area apexcharts-radialbar-slice-0"
-                                                                        data:angle="181" data:value="67" index="0" j="0"
-                                                                        data:pathOrig="M 79.38343481566392 196.61656518433605 A 82.89634146341464 82.89634146341464 0 1 1 197.63063771709733 80.41536252201178">
-                                                                    </path>
-                                                                </g>
-                                                                <circle id="SvgjsCircle1842" r="64.7244512195122"
-                                                                    cx="138" cy="138"
-                                                                    class="apexcharts-radialbar-hollow"
-                                                                    fill="transparent"></circle>
-                                                                <g id="SvgjsG1843" class="apexcharts-datalabels-group"
-                                                                    transform="translate(0, 0) scale(1)"
-                                                                    style="opacity: 1;">
-                                                                    <text id="SvgjsText1844"
-                                                                        font-family="Helvetica, Arial, sans-serif"
-                                                                        x="138" y="138" text-anchor="middle"
-                                                                        dominant-baseline="auto" font-size="16px"
-                                                                        font-weight="600" fill="#475569"
-                                                                        class="apexcharts-text apexcharts-datalabel-label"
-                                                                        style="font-family: Helvetica, Arial, sans-serif;">Total</text><text
-                                                                        id="SvgjsText1845"
-                                                                        font-family="Helvetica, Arial, sans-serif"
-                                                                        x="138" y="170" text-anchor="middle"
-                                                                        dominant-baseline="auto" font-size="16px"
-                                                                        font-weight="400" fill="#475569"
-                                                                        class="apexcharts-text apexcharts-datalabel-value"
-                                                                        style="font-family: Helvetica, Arial, sans-serif;">249</text>
-                                                                </g>
-                                                            </g>
-                                                        </g>
-                                                    </g>
-                                                    <line id="SvgjsLine1853" x1="0" y1="0" x2="276" y2="0"
-                                                        stroke="#b6b6b6" stroke-dasharray="0" stroke-width="1"
-                                                        stroke-linecap="butt" class="apexcharts-ycrosshairs"></line>
-                                                    <line id="SvgjsLine1854" x1="0" y1="0" x2="276" y2="0"
-                                                        stroke-dasharray="0" stroke-width="0" stroke-linecap="butt"
-                                                        class="apexcharts-ycrosshairs-hidden"></line>
-                                                </g>
-                                                <g id="SvgjsG1828" class="apexcharts-annotations"></g>
-                                            </svg>
-                                            <div class="apexcharts-legend"></div>
+                            <div class="col-lg-4">
+                                <div class="card border-0 shadow-sm" style="border-radius: 16px;">
+                                    <div class="card-body p-4">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom">
+                                            <h5 class="mb-0" style="font-weight: 700;">Overview</h5>
+                                            <select class="form-select form-select-sm"
+                                                style="width: auto; border-radius: 8px; border: 1px solid #e2e8f0;">
+                                                <option>January</option>
+                                                <option>February</option>
+                                                <option>March</option>
+                                            </select>
+                                        </div>
+                                        <div id="apexcharts4p9n4fkx" style="min-height: 220px;"></div>
+                                        <div class="row text-center mt-3 pt-3 border-top g-3">
+                                            <div class="col-4">
+                                                <p class="text-muted mb-1" style="font-size: 11px;">Invested Amount</p>
+                                                <h6 class="mb-0" style="font-weight: 700;">$8340.57</h6>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="text-muted mb-1" style="font-size: 11px;">Invested Amount</p>
+                                                <h6 class="mb-0" style="font-weight: 700;">$8340.57</h6>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="text-muted mb-1" style="font-size: 11px;">Invested Amount</p>
+                                                <h6 class="mb-0" style="font-weight: 700;">$8340.57</h6>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="amount col-12 d-flex bg-white p-3 text-center">
-                                    <div class="invest col-4">
-                                        <p style="font-size: 12px;" class="mb-1">Invested Amount</p>
-                                        <h6>$8340.57</h6>
-                                    </div>
-                                    <div class="invest col-4">
-                                        <p style="font-size: 12px;" class="mb-1">Invested Amount</p>
-                                        <h6>$8340.57</h6>
-                                    </div>
-                                    <div class="invest col-4">
-                                        <p style="font-size: 12px;" class="mb-1">Invested Amount</p>
-                                        <h6>$8340.57</h6>
-                                    </div>
-                                </div>
                             </div>
-
                         </div>
 
-                        <div class="col-12 bg-white p-0">
+
+
+                        <div class=" col-12 bg-white p-0">
                             <div class="foot p-2 d-flex justify-content-between">
                                 <h5 class="fs-6 m-0"> COPYRIGHT © 2022 DashCode, All rights Reserved </h5>
-                                <h5 class="fs-6 m-0"> Hand-crafted & Made by <span class="text-info"> Codeshaper </span>
+                                <h5 class="fs-6 m-0"> Hand-crafted & Made by <span class="text-info"> Codeshaper
+                                    </span>
                                 </h5>
                             </div>
 
