@@ -271,7 +271,6 @@ const otpForm =async (req, res) => {
 
 };
 
-
 const forgotPass = async (req, res) => {
     const { email } = req.body;
     let admins = await userModel.find();

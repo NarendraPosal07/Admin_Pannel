@@ -9,86 +9,268 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background: rgb(250, 56, 246);
-            background: linear-gradient(90deg, rgba(250, 56, 246, 1) 0%, rgba(131, 58, 180, 1) 100%);
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            top: -200px;
+            left: -200px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            bottom: -150px;
+            right: -150px;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+            }
+            50% {
+                transform: translateY(20px) translateX(20px);
+            }
         }
 
         .wrap {
-            width: 400px;
-            margin-top: 150px;
-            padding: 50px;
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.234);
-            box-shadow: 0 8px 32px 0 rgba(63, 65, 88, 0.37);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
+            width: 440px;
+            padding: 50px 45px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 
+                        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+            position: relative;
+            z-index: 1;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 35px;
+            font-weight: 400;
         }
 
         form {
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 4px 0px, rgba(99, 99, 99, 0.1) 0px -2 px 6px 0px, rgba(99, 99, 99, 0.2) 0 px 10px 0px;
-
+            padding: 0;
+            box-shadow: none;
+            border-radius: 0;
         }
 
-        .btn.b-1 {
-            background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(250, 56, 246, 1) 100%);
-            border: 0;
-            padding: 10px 25px;
-        }
-
-        .btn {
-            background: rgb(247, 57, 253);
-            background: radial-gradient(circle, rgba(247, 57, 253, 1) 0%, rgba(126, 9, 180, 1) 100%);
-        }
-
-        input {
-            border: 0;
-            outline: none;
-            border-radius: 5px;
-            height: 30px;
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
         }
 
         label {
-            font-size: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #444;
+            margin-bottom: 8px;
+            display: block;
+            transition: all 0.3s ease;
         }
-        a{
+
+        input {
+            width: 100%;
+            border: 2px solid #e0e0e0;
+            outline: none;
+            border-radius: 12px;
+            height: 52px;
+            padding: 0 20px;
+            font-size: 15px;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        input:focus {
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+        }
+
+        input::placeholder {
+            color: #aaa;
+        }
+
+        .forgot-link {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: -10px;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .forgot-link:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            height: 52px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 12px;
             color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            margin-top: 10px;
         }
-       
+
+        button[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(102, 126, 234, 0.5);
+        }
+
+        button[type="submit"]:active {
+            transform: translateY(0);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 30px 0;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .divider span {
+            padding: 0 15px;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .signup-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .signup-link a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .icon-wrapper {
+            position: absolute;
+            right: 18px;
+            top: 42px;
+            color: #aaa;
+            pointer-events: none;
+        }
+
+        @media (max-width: 500px) {
+            .wrap {
+                width: 90%;
+                padding: 40px 30px;
+            }
+        }
     </style>
 
 </head>
 
 <body>
 
-    <div class="container text-center d-flex justify-content-center align-items-center">   
+    <div class="wrap">
+        <h2>Welcome Back</h2>
+        <p class="subtitle">Please login to your account</p>
 
-        <div class="wrap">
-
-            <h2 class="mb-2 text-white">
-                Login Form
-            </h2>
-
-            <form action="/signin" method="post">
-                <label>E-Mail</label><input type="email" name="email"><br /><br />
-                <label>Password</label><input type="password" name="password"><br /><br />
-                <a href="/forgot">Forgot Password ?</a><br /><br />
-                <button type="submit" class="bg-success btn px-5 text-white">Log In</button>
-            </form>
-
-            <div class=" d-flex justify-content-evenly">
-                <a href="register">Creat New User</a>
+        <form action="/signin" method="post">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
             </div>
 
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password" required>
+            </div>
+
+            <a href="/forgot" class="forgot-link">Forgot Password?</a>
+
+            <button type="submit">Log In</button>
+        </form>
+
+        <div class="divider">
+            <span>OR</span>
         </div>
-        
+
+        <div class="signup-link">
+            <a href="register">Create New Account</a>
+        </div>
     </div>
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
